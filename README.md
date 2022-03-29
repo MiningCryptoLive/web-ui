@@ -9,7 +9,7 @@ How to install & Configure
   
   You should now see the site but no live info
 
-- Change the config in the assets/js/miningcore.js
+- Change the config in the assets/js/miningcore-ui.js
   
   var API = 'http://localhost/api/'; // Change this in your miningcore public API address 
 
