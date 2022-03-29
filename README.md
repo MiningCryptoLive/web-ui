@@ -1,7 +1,5 @@
-# Miningcore.UI by GetBlok.io
-Miningcore UI for the Coinfoundry Miningcore Pool, customized for GetBlok.io
-
-# NOTE: THIS REPOSITORY IS DEPRECATED AND NO LONGER MAINTAINED.
+# Miningcore.UI by MiningCryptoLive
+Miningcore UI for the Miningcore Pool, customized for MiningCryptoLive
 
 How to install & Configure
 
@@ -23,5 +21,5 @@ How to install & Configure
 
 
 
-Our pool website can be found at https://www.getblok.io
+Our pool website can be found at https://erg.miningcrypto.live
 
