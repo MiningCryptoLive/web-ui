@@ -1,5 +1,5 @@
 # Miningcore.UI by MiningCryptoLive
-Miningcore UI for the Miningcore Pool, customized for MiningCryptoLive
+Miningcore UI for Miningcore Pool, customized for MiningCryptoLive
 
 How to install & Configure
 
