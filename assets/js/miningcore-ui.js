@@ -1,5 +1,5 @@
 // config
-var API = 'https://erg.miningcrypto.live/api/'; // Change this to your pool API address
+var API = 'https://ergo.miningcrypto.live/api/'; // Change this to your pool API address
 var defaultPool = 'ergo'; // Default Pool ID
 
 var currentPool = defaultPool;
