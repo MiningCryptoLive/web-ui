@@ -121,7 +121,11 @@ function loadStatsData() {
 	.done(function(data) {
 	$.each(data.pools, function(index, value) {
 		if (currentPool === value.id) {
+		var PoolisOfPercent = ((value.poolStats.poolHashrate / value.networkStats.networkHashrate) * 100);
+		var roundEffort = (value.poolEffort * 100).toFixed(2);
+            $("#networkType").text(_formatter(value.poolStats.networkType, 0, ""));
 		$("#coinName").text(value.coin.name);
+		$("#coinAlgo").text(value.coin.algorithm);
 		$("#blockchainHeight").text(value.networkStats.blockHeight);
 		$("#connectedPeers").text(value.networkStats.connectedPeers);
 		$("#minimumPayment").text(value.paymentProcessing.minimumPayment + " " + value.coin.type);
@@ -134,8 +138,17 @@ function loadStatsData() {
 		$("#networkHashRate").text(_formatter(value.networkStats.networkHashrate, 3, "H/s"));
 		$("#networkDifficulty").text(_formatter(value.networkStats.networkDifficulty, 3, "H/s"));
 		$("#lastNetworkBlock").text(dateConvertor(value.networkStats.lastNetworkBlockTime));
+		$("#lastPoolBlock").text(dateConvertor(value.lastPoolBlockTime));
+		$("#blockConfirmations").text(value.paymentProcessing.minimumConfirmations);
+		$("#poolPercentofNetwork").text(PoolisOfPercent.toFixed(3) + " %");
+		$("#poolEstimatedBlocks").text((PoolisOfPercent * 720 / 100).toFixed(4));
+		$("#totalPaid").text(_formatter(value.totalPaid, 2, ""));
+		$("#sharesPerSecond").text(_formatter(value.poolStats.sharesPerSecond, 5, 'H/s'));
+		$("#poolBlocks").text(value.totalBlocks);
+		$("#poolEffort").text(roundEffort + "%");
 		}
 	});
+
 	})
         .fail(function () {
             $.notify({
